@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionando...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital&hl=pt_BR&pli=1";
+            } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+                window.location.href = "https://apps.apple.com/br/app/brasilcard-digital/id1593431800";
+            } else {
+                window.location.href = "https://www.brasilcard.net";
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <img src="logo.png" alt="Logo Brasilcard">
+    <p>Estamos te redirecionando. Aguarde...</p>
+</body>
+
+</html>
